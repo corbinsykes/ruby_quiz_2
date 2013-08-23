@@ -8,17 +8,32 @@
 
 QUIZ_TOPICS = ["ruby", "rspec", "testing", "arrays", "objects"]
 
-# create a quiz object
+class Quiz
+  def initialize
+    @numbers = []
+  end
 
-# We can add numbers to it
+  def add(number)
+    if number.is_a? Integer
+      @numbers << number
+    end
+  end
+
+  def numbers
+    @numbers
+  end
+end
+# create a quiz object -- PASSED
+
+# We can add numbers to it -- PASSED
 # quiz = Quiz.new
 # quiz.add(5)
 # quiz.add(3)
 
-# We can see the numbers we've added
+# We can see the numbers we've added -- PASSED
 # quiz.numbers => "[5, 3]"
 
-# We can only add numbers
+# We can only add numbers -- PASSED
 # quiz.add("7")
 # quiz.numbers => "[5, 3]"
 
